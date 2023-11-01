@@ -42,12 +42,20 @@ function makeShape(){
     if(response.shape === 'square'){
         let newShape = new Circle(response.text, response.textcolor, response.shapecolor);
         return newShape.render();
-    };
-    
+    }
+    return fs.writeFile('logo.svg',newShape.render());
 }
+
+function makeLogo(response){
+    let svgshape = makeShape(response);
+    fs.writeFile('logo.svg', svgshape);
+};
 
 function init() {
     inquirer.prompt(questions)
+    .then((response) => {
+        makeLogo(response);
+    });
 };
 
 init();
