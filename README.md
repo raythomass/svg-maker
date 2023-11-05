@@ -12,4 +12,5 @@ The installation consists of cloning the repo to your local machine.
 Once in the repo, open the integarted terminal and type in "npm install". This will install all the needed packages to run the program. Then, type in "node index.js". This will give you four questions in the command line. Once answered, the svg file will be created within the file strcuture.
 
 ## Video Link
+https://youtu.be/5xnXcDcmArM
 
